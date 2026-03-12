@@ -17,8 +17,8 @@ export default function Contact() {
                 <span className="contact__title-accent">Extraordinary</span>
               </h2>
               <p className="contact__desc">
-                Have a complex problem to solve, a product to build, or an existing system
-                to improve? Reach out and let&apos;s explore what&apos;s possible.
+                Have a complex business problem to solve, a product to build, or an existing
+                system to improve? Reach out and let&apos;s explore what&apos;s possible together.
               </p>
               <div className="contact__items">
                 <div className="contact__item">
@@ -28,6 +28,13 @@ export default function Contact() {
                     <a href="mailto:hello@galvanixlabs.com" className="contact__item-value">
                       hello@galvanixlabs.com
                     </a>
+                  </div>
+                </div>
+                <div className="contact__item">
+                  <span className="contact__item-icon" aria-hidden="true">📍</span>
+                  <div>
+                    <p className="contact__item-label">Location</p>
+                    <p className="contact__item-value">Michigan, United States</p>
                   </div>
                 </div>
                 <div className="contact__item">
@@ -41,7 +48,7 @@ export default function Contact() {
                   <span className="contact__item-icon" aria-hidden="true">🌍</span>
                   <div>
                     <p className="contact__item-label">Availability</p>
-                    <p className="contact__item-value">Remote & On-site worldwide</p>
+                    <p className="contact__item-value">Remote &amp; On-site worldwide</p>
                   </div>
                 </div>
               </div>

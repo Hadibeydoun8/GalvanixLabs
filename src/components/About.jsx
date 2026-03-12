@@ -32,8 +32,8 @@ export default function About() {
               reliable, and uniquely fitted to your needs.
             </p>
             <p className="about__para">
-              Clients range from small local businesses to UN agencies. Scale and sector don&apos;t
-              matter — challenging problems do.
+              Based in Michigan and serving clients from small local businesses to UN agencies
+              worldwide — scale and sector don&apos;t matter. Challenging problems do.
             </p>
           </div>
 

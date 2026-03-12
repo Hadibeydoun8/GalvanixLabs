@@ -17,19 +17,19 @@ export default function Hero() {
       <div className="hero__content">
         <div className="hero__badge">
           <span className="hero__badge-dot"/>
-          Full-Stack Engineering & Innovation
+          Custom Software &amp; Engineering for Business
         </div>
 
         <h1 className="hero__title">
-          Engineering<br/>
-          <span className="hero__title-gradient">Exceptional</span><br/>
-          Digital Solutions
+          Bespoke Software<br/>
+          <span className="hero__title-gradient">Built for</span><br/>
+          Your Business
         </h1>
 
         <p className="hero__subtitle">
-          From native mobile apps processing <strong>15&nbsp;million images</strong> to real-time
-          FPGA-based AI systems — Galvanix Labs builds bespoke software,
-          hardware, and infrastructure for complex real-world challenges.
+          Galvanix Labs designs and builds custom software tailored to your exact business needs —
+          from native mobile apps processing <strong>15&nbsp;million images</strong> and real-time
+          AI systems to full-stack web platforms and embedded hardware solutions.
         </p>
 
         <div className="hero__actions">

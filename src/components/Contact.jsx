@@ -13,13 +13,12 @@ export default function Contact() {
             <div className="contact__info">
               <span className="section-label">Get in Touch</span>
               <h2 className="section-title contact__title">
-                Work with a Michigan<br/>
-                <span className="contact__title-accent">Software Company</span>
+                Let&apos;s Build Something<br/>
+                <span className="contact__title-accent">Extraordinary</span>
               </h2>
               <p className="contact__desc">
-                Looking for a <strong>Michigan software development company</strong>? Whether
-                you have a complex problem to solve, a product to build, or an existing system
-                to improve — reach out and let&apos;s explore what&apos;s possible together.
+                Have a complex business problem to solve, a product to build, or an existing
+                system to improve? Reach out and let&apos;s explore what&apos;s possible together.
               </p>
               <div className="contact__items">
                 <div className="contact__item">
@@ -49,7 +48,7 @@ export default function Contact() {
                   <span className="contact__item-icon" aria-hidden="true">🌍</span>
                   <div>
                     <p className="contact__item-label">Availability</p>
-                    <p className="contact__item-value">Remote &amp; On-site — Michigan &amp; Worldwide</p>
+                    <p className="contact__item-value">Remote &amp; On-site worldwide</p>
                   </div>
                 </div>
               </div>

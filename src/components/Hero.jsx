@@ -17,19 +17,19 @@ export default function Hero() {
       <div className="hero__content">
         <div className="hero__badge">
           <span className="hero__badge-dot"/>
-          Michigan Software Development &amp; Engineering
+          Custom Software &amp; Engineering for Business
         </div>
 
         <h1 className="hero__title">
-          Michigan&apos;s Custom<br/>
-          <span className="hero__title-gradient">Software &amp; AI</span><br/>
-          Engineering Studio
+          Bespoke Software<br/>
+          <span className="hero__title-gradient">Built for</span><br/>
+          Your Business
         </h1>
 
         <p className="hero__subtitle">
-          Galvanix Labs is a <strong>Michigan-based software development company</strong> building
-          custom web apps, mobile apps, AI/ML systems, and FPGA hardware — from native apps
-          processing <strong>15&nbsp;million images</strong> to real-time on-site AI for live events.
+          Galvanix Labs designs and builds custom software tailored to your exact business needs —
+          from native mobile apps processing <strong>15&nbsp;million images</strong> and real-time
+          AI systems to full-stack web platforms and embedded hardware solutions.
         </p>
 
         <div className="hero__actions">

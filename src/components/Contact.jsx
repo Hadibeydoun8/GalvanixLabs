@@ -1,170 +1,142 @@
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import './Contact.css'
 
-const initialForm = { name: '', email: '', subject: '', message: '' }
-
 export default function Contact() {
-  const [form, setForm] = useState(initialForm)
-  const [status, setStatus] = useState('idle') // idle | sending | success | error
-
-  const handleChange = e => {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
-  }
-
-  const handleSubmit = async e => {
-    e.preventDefault()
-    setStatus('sending')
-    // Replace this with your preferred form service (Formspree, EmailJS, etc.)
-    // For now, we simulate a short delay and show success state.
-    try {
-      await new Promise(r => setTimeout(r, 1000))
-      setStatus('success')
-      setForm(initialForm)
-    } catch {
-      setStatus('error')
-    }
-  }
+  const [state, handleSubmit] = useForm("mbdzovoz")
 
   return (
-    <section id="contact" className="contact">
-      <div className="section-inner">
-        <div className="contact__layout">
-          {/* Left info */}
-          <div className="contact__info">
-            <span className="section-label">Get in Touch</span>
-            <h2 className="section-title contact__title">
-              Let&apos;s Build Something<br/>
-              <span className="contact__title-accent">Extraordinary</span>
-            </h2>
-            <p className="contact__desc">
-              Have a complex problem to solve, a product to build, or an existing system
-              to improve? Reach out and let&apos;s explore what&apos;s possible.
-            </p>
+      <section id="contact" className="contact">
+        <div className="section-inner">
+          <div className="contact__layout">
 
-            <div className="contact__items">
-              <div className="contact__item">
-                <span className="contact__item-icon" aria-hidden="true">✉️</span>
-                <div>
-                  <p className="contact__item-label">Email</p>
-                  {/* Update this email address as needed */}
-                  <a href="mailto:hello@galvanixlabs.com" className="contact__item-value">
-                    hello@galvanixlabs.com
-                  </a>
+            {/* Left info — unchanged */}
+            <div className="contact__info">
+              <span className="section-label">Get in Touch</span>
+              <h2 className="section-title contact__title">
+                Let&apos;s Build Something<br/>
+                <span className="contact__title-accent">Extraordinary</span>
+              </h2>
+              <p className="contact__desc">
+                Have a complex problem to solve, a product to build, or an existing system
+                to improve? Reach out and let&apos;s explore what&apos;s possible.
+              </p>
+              <div className="contact__items">
+                <div className="contact__item">
+                  <span className="contact__item-icon" aria-hidden="true">✉️</span>
+                  <div>
+                    <p className="contact__item-label">Email</p>
+                    <a href="mailto:hello@galvanixlabs.com" className="contact__item-value">
+                      hello@galvanixlabs.com
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="contact__item">
-                <span className="contact__item-icon" aria-hidden="true">⚡</span>
-                <div>
-                  <p className="contact__item-label">Response time</p>
-                  <p className="contact__item-value">Within 24 hours</p>
+                <div className="contact__item">
+                  <span className="contact__item-icon" aria-hidden="true">⚡</span>
+                  <div>
+                    <p className="contact__item-label">Response time</p>
+                    <p className="contact__item-value">Within 24 hours</p>
+                  </div>
                 </div>
-              </div>
-              <div className="contact__item">
-                <span className="contact__item-icon" aria-hidden="true">🌍</span>
-                <div>
-                  <p className="contact__item-label">Availability</p>
-                  <p className="contact__item-value">Remote & On-site worldwide</p>
+                <div className="contact__item">
+                  <span className="contact__item-icon" aria-hidden="true">🌍</span>
+                  <div>
+                    <p className="contact__item-label">Availability</p>
+                    <p className="contact__item-value">Remote & On-site worldwide</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Form */}
-          <div className="contact__form-wrap">
-            {status === 'success' ? (
-              <div className="contact__success">
-                <span className="contact__success-icon" aria-hidden="true">✅</span>
-                <h3>Message Sent!</h3>
-                <p>Thanks for reaching out. I&apos;ll be in touch within 24 hours.</p>
-                <button className="btn btn--outline" onClick={() => setStatus('idle')}>
-                  Send Another
-                </button>
-              </div>
-            ) : (
-              <form className="contact__form" onSubmit={handleSubmit} noValidate>
-                <div className="contact__row">
-                  <div className="contact__field">
-                    <label htmlFor="name" className="contact__label">Your Name</label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      className="contact__input"
-                      placeholder="Jane Smith"
-                      value={form.name}
-                      onChange={handleChange}
-                      required
-                      autoComplete="name"
-                    />
+            {/* Form */}
+            <div className="contact__form-wrap">
+              {state.succeeded ? (
+                  <div className="contact__success">
+                    <span className="contact__success-icon" aria-hidden="true">✅</span>
+                    <h3>Message Sent!</h3>
+                    <p>Thanks for reaching out. I&apos;ll be in touch within 24 hours.</p>
                   </div>
-                  <div className="contact__field">
-                    <label htmlFor="email" className="contact__label">Email Address</label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      className="contact__input"
-                      placeholder="jane@example.com"
-                      value={form.email}
-                      onChange={handleChange}
-                      required
-                      autoComplete="email"
-                    />
-                  </div>
-                </div>
+              ) : (
+                  <form className="contact__form" onSubmit={handleSubmit} noValidate>
+                    <div className="contact__row">
+                      <div className="contact__field">
+                        <label htmlFor="name" className="contact__label">Your Name</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            className="contact__input"
+                            placeholder="Jane Smith"
+                            required
+                            autoComplete="name"
+                        />
+                        <ValidationError prefix="Name" field="name" errors={state.errors} className="contact__error" />
+                      </div>
+                      <div className="contact__field">
+                        <label htmlFor="email" className="contact__label">Email Address</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            className="contact__input"
+                            placeholder="jane@example.com"
+                            required
+                            autoComplete="email"
+                        />
+                        <ValidationError prefix="Email" field="email" errors={state.errors} className="contact__error" />
+                      </div>
+                    </div>
 
-                <div className="contact__field">
-                  <label htmlFor="subject" className="contact__label">Subject</label>
-                  <input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    className="contact__input"
-                    placeholder="Project enquiry / consultation"
-                    value={form.subject}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+                    <div className="contact__field">
+                      <label htmlFor="subject" className="contact__label">Subject</label>
+                      <input
+                          id="subject"
+                          name="subject"
+                          type="text"
+                          className="contact__input"
+                          placeholder="Project enquiry / consultation"
+                          required
+                      />
+                      <ValidationError prefix="Subject" field="subject" errors={state.errors} className="contact__error" />
+                    </div>
 
-                <div className="contact__field">
-                  <label htmlFor="message" className="contact__label">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    className="contact__input contact__textarea"
-                    placeholder="Tell me about your project, timeline, and any technical requirements…"
-                    value={form.message}
-                    onChange={handleChange}
-                    rows={6}
-                    required
-                  />
-                </div>
+                    <div className="contact__field">
+                      <label htmlFor="message" className="contact__label">Message</label>
+                      <textarea
+                          id="message"
+                          name="message"
+                          className="contact__input contact__textarea"
+                          placeholder="Tell me about your project, timeline, and any technical requirements…"
+                          rows={6}
+                          required
+                      />
+                      <ValidationError prefix="Message" field="message" errors={state.errors} className="contact__error" />
+                    </div>
 
-                {status === 'error' && (
-                  <p className="contact__error">
-                    Something went wrong. Please try emailing directly at hello@galvanixlabs.com
-                  </p>
-                )}
+                    {state.errors?.length > 0 && !state.errors[0]?.field && (
+                        <p className="contact__error">
+                          Something went wrong. Please try emailing directly at{' '}
+                          <a href="mailto:hello@galvanixlabs.com">hello@galvanixlabs.com</a>
+                        </p>
+                    )}
 
-                <button
-                  type="submit"
-                  className="btn btn--primary contact__submit"
-                  disabled={status === 'sending'}
-                >
-                  {status === 'sending' ? 'Sending…' : 'Send Message'}
-                  {status !== 'sending' && (
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                      <path d="M2 8l10-6-4 6 4 6z" fill="currentColor" opacity="0.3"/>
-                      <path d="M2 8l12-6M2 8l12 6M2 8h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  )}
-                </button>
-              </form>
-            )}
+                    <button
+                        type="submit"
+                        className="btn btn--primary contact__submit"
+                        disabled={state.submitting}
+                    >
+                      {state.submitting ? 'Sending…' : 'Send Message'}
+                      {!state.submitting && (
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M2 8l10-6-4 6 4 6z" fill="currentColor" opacity="0.3"/>
+                            <path d="M2 8l12-6M2 8l12 6M2 8h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                      )}
+                    </button>
+                  </form>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   )
 }

@@ -34,6 +34,7 @@ export default function Footer() {
             <span>Galvanix<span className="footer__logo-accent">Labs</span></span>
           </a>
           <p className="footer__tagline">
+            Michigan-based software &amp; engineering company.<br/>
             Precision engineering across every layer of the stack.
           </p>
         </div>

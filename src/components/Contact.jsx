@@ -13,12 +13,13 @@ export default function Contact() {
             <div className="contact__info">
               <span className="section-label">Get in Touch</span>
               <h2 className="section-title contact__title">
-                Let&apos;s Build Something<br/>
-                <span className="contact__title-accent">Extraordinary</span>
+                Work with a Michigan<br/>
+                <span className="contact__title-accent">Software Company</span>
               </h2>
               <p className="contact__desc">
-                Have a complex problem to solve, a product to build, or an existing system
-                to improve? Reach out and let&apos;s explore what&apos;s possible.
+                Looking for a <strong>Michigan software development company</strong>? Whether
+                you have a complex problem to solve, a product to build, or an existing system
+                to improve — reach out and let&apos;s explore what&apos;s possible together.
               </p>
               <div className="contact__items">
                 <div className="contact__item">
@@ -28,6 +29,13 @@ export default function Contact() {
                     <a href="mailto:hello@galvanixlabs.com" className="contact__item-value">
                       hello@galvanixlabs.com
                     </a>
+                  </div>
+                </div>
+                <div className="contact__item">
+                  <span className="contact__item-icon" aria-hidden="true">📍</span>
+                  <div>
+                    <p className="contact__item-label">Location</p>
+                    <p className="contact__item-value">Michigan, United States</p>
                   </div>
                 </div>
                 <div className="contact__item">
@@ -41,7 +49,7 @@ export default function Contact() {
                   <span className="contact__item-icon" aria-hidden="true">🌍</span>
                   <div>
                     <p className="contact__item-label">Availability</p>
-                    <p className="contact__item-value">Remote & On-site worldwide</p>
+                    <p className="contact__item-value">Remote &amp; On-site — Michigan &amp; Worldwide</p>
                   </div>
                 </div>
               </div>

@@ -49,10 +49,10 @@ export default function Services() {
       <div className="section-inner">
         <div className="section-header">
           <span className="section-label">What We Do</span>
-          <h2 className="section-title">Services & Capabilities</h2>
+          <h2 className="section-title">Michigan Software &amp; Engineering Services</h2>
           <p className="section-subtitle">
-            Deep expertise across the full technology stack — from transistors to user interfaces,
-            from embedded firmware to cloud infrastructure.
+            A Michigan-based engineering team with deep expertise across the full technology
+            stack — from transistors to user interfaces, embedded firmware to cloud infrastructure.
           </p>
         </div>
 

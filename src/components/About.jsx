@@ -19,11 +19,11 @@ export default function About() {
               <span className="about__title-accent">first principles</span>
             </h2>
             <p className="about__para">
-              Galvanix Labs was founded on the belief that technology should be built right —
-              with precision, depth, and a genuine understanding of the problem at hand.
-              Whether it&apos;s an FPGA running AI at a live sports event, a route-optimisation
-              engine for UNICEF, or a custom microcontroller punch system, every project
-              receives the same rigorous engineering approach.
+              Galvanix Labs is a <strong>Michigan-based software development company</strong> founded
+              on the belief that technology should be built right — with precision, depth, and a
+              genuine understanding of the problem at hand. Whether it&apos;s an FPGA running AI at
+              a live sports event, a route-optimisation engine for UNICEF, or a custom microcontroller
+              punch system, every project receives the same rigorous engineering approach.
             </p>
             <p className="about__para">
               We operate at every layer of the stack — from PCB design and embedded firmware
@@ -32,8 +32,9 @@ export default function About() {
               reliable, and uniquely fitted to your needs.
             </p>
             <p className="about__para">
-              Clients range from small local businesses to UN agencies. Scale and sector don&apos;t
-              matter — challenging problems do.
+              Based in Michigan and serving clients across the US and internationally — from small
+              local businesses to UN agencies — we bring enterprise-grade engineering to every
+              project, regardless of size or sector.
             </p>
           </div>
 

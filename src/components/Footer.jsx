@@ -5,7 +5,17 @@ const navLinks = [
   { label: 'Projects', href: '#projects' },
   { label: 'Services', href: '#services' },
   { label: 'About',    href: '#about' },
+  { label: 'FAQ',      href: '#faq' },
   { label: 'Contact',  href: '#contact' },
+]
+
+const serviceLinks = [
+  { label: 'Custom Web Application Development', href: '#services' },
+  { label: 'Custom Mobile App Development',      href: '#services' },
+  { label: 'AI & Machine Learning Development',  href: '#services' },
+  { label: 'Embedded Systems & FPGA',            href: '#services' },
+  { label: 'Custom Business Software',           href: '#services' },
+  { label: 'Full-Stack Engineering',             href: '#services' },
 ]
 
 export default function Footer() {
@@ -34,15 +44,35 @@ export default function Footer() {
             <span>Galvanix<span className="footer__logo-accent">Labs</span></span>
           </a>
           <p className="footer__tagline">
-            Precision engineering across every layer of the stack.
+            Custom software development company — Michigan, USA.
+            Precision-engineered applications for businesses worldwide.
+          </p>
+          <p className="footer__contact-line">
+            <a href="mailto:hello@galvanixlabs.com">hello@galvanixlabs.com</a>
           </p>
         </div>
 
         {/* Nav */}
         <nav className="footer__nav" aria-label="Footer navigation">
+          <p className="footer__nav-heading">Navigate</p>
           {navLinks.map(link => (
             <a
-              key={link.href}
+              key={link.href + link.label}
+              href={link.href}
+              className="footer__nav-link"
+              onClick={e => handleNav(e, link.href)}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Services */}
+        <nav className="footer__services" aria-label="Services navigation">
+          <p className="footer__nav-heading">Custom Software Services</p>
+          {serviceLinks.map(link => (
+            <a
+              key={link.label}
               href={link.href}
               className="footer__nav-link"
               onClick={e => handleNav(e, link.href)}
@@ -54,7 +84,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom">
-        <p>© {new Date().getFullYear()} Galvanix Labs. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Galvanix Labs. All rights reserved. Custom software development company based in Michigan, USA.</p>
         <button
           className="footer__back-top"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

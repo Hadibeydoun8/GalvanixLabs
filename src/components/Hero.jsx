@@ -17,30 +17,31 @@ export default function Hero() {
       <div className="hero__content">
         <div className="hero__badge">
           <span className="hero__badge-dot"/>
-          Custom Software &amp; Engineering for Business
+          Custom Software Development Company — Michigan
         </div>
 
         <h1 className="hero__title">
-          Bespoke Software<br/>
-          <span className="hero__title-gradient">Built for</span><br/>
-          Your Business
+          Custom Software<br/>
+          <span className="hero__title-gradient">Applications</span><br/>
+          Built for Your Business
         </h1>
 
         <p className="hero__subtitle">
-          Galvanix Labs designs and builds custom software tailored to your exact business needs —
+          Galvanix Labs is a <strong>custom software development company</strong> based in Michigan.
+          We design and build bespoke applications tailored to your exact business needs —
           from native mobile apps processing <strong>15&nbsp;million images</strong> and real-time
           AI systems to full-stack web platforms and embedded hardware solutions.
         </p>
 
         <div className="hero__actions">
           <button className="btn btn--primary hero__btn" onClick={() => handleScroll('#projects')}>
-            View Projects
+            View Our Work
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
           <button className="btn btn--outline hero__btn" onClick={() => handleScroll('#contact')}>
-            Start a Project
+            Get a Free Quote
           </button>
         </div>
 

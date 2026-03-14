@@ -1,45 +1,53 @@
 import './Services.css'
 
+const prefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+const smoothScrollTo = (selector) => {
+  const target = document.querySelector(selector)
+  if (target) target.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
+}
+
 const services = [
   {
     icon: '📱',
-    title: 'Native Mobile Apps',
-    desc: 'High-performance iOS and Android applications built with native frameworks — Swift, Kotlin, and cross-platform tools. From consumer apps to enterprise solutions.',
+    title: 'Custom Mobile App Development',
+    desc: 'Native iOS and Android applications built with Swift, Kotlin, and cross-platform frameworks. We build custom mobile apps for enterprises, startups, and consumer platforms — from MVP to production at scale.',
   },
   {
     icon: '🤖',
-    title: 'AI & Machine Learning',
-    desc: 'Computer vision, face recognition, predictive modelling, and custom ML pipelines. We build and deploy models that solve real problems at production scale.',
+    title: 'AI & Machine Learning Development',
+    desc: 'Custom AI software including computer vision, face recognition, predictive modelling, and ML pipelines. We design and deploy production-grade AI systems that solve real business problems.',
   },
   {
     icon: '⚡',
-    title: 'Hardware & FPGA',
-    desc: 'Custom embedded systems, microcontroller firmware, FPGA design, and PCB development. From prototype to production-ready hardware solutions.',
+    title: 'Embedded Systems & FPGA Development',
+    desc: 'Custom embedded software, microcontroller firmware, FPGA design, and PCB development. Full hardware-to-software custom solutions from prototype to production.',
   },
   {
     icon: '🌐',
-    title: 'Full-Stack Web Development',
-    desc: 'Modern, responsive websites and web applications with robust server-side processing, databases, APIs, and third-party integrations. Built to scale.',
+    title: 'Custom Web Application Development',
+    desc: 'Bespoke web applications with server-side processing, databases, REST/GraphQL APIs, and third-party integrations. Modern full-stack custom software built to scale with your business.',
   },
   {
     icon: '⚙️',
-    title: 'Systems & Infrastructure',
-    desc: 'Print servers, backup systems, VPN setup, server provisioning, and custom networking. Reliable infrastructure that keeps your business running.',
+    title: 'Systems & Infrastructure Engineering',
+    desc: 'Custom print servers, backup systems, VPN setup, server provisioning, and networking solutions. Reliable custom infrastructure software that keeps your business running 24/7.',
   },
   {
     icon: '🗺️',
-    title: 'Optimisation & Simulation',
-    desc: 'Route optimisation, logistics algorithms, electrical grid simulation, and operational research. Data-driven tools that make complex decisions straightforward.',
+    title: 'Optimisation & Simulation Software',
+    desc: 'Custom route optimisation engines, logistics algorithms, electrical grid simulators, and operational research tools. Data-driven custom applications that make complex decisions straightforward.',
   },
   {
     icon: '🕐',
-    title: 'Custom Business Tools',
-    desc: 'Bespoke software tailored to your exact workflow — from studio management and archive tools to custom punch systems with hardware integration.',
+    title: 'Custom Business Software & Tools',
+    desc: 'Bespoke business applications tailored to your exact workflows — from studio management and archive systems to custom time-tracking hardware integrations. Replace generic tools with software built for you.',
   },
   {
     icon: '🔒',
-    title: 'Data Integrity & Backup',
-    desc: 'Automated backup strategies, integrity verification, multi-site replication, and monitoring dashboards. Protect your most valuable assets.',
+    title: 'Data Integrity & Backup Systems',
+    desc: 'Automated backup strategies, integrity verification, multi-site replication, and monitoring dashboards. Custom software solutions that protect your most valuable business assets.',
   },
 ]
 
@@ -48,11 +56,12 @@ export default function Services() {
     <section id="services" className="services">
       <div className="section-inner">
         <div className="section-header">
-          <span className="section-label">What We Do</span>
-          <h2 className="section-title">Custom Software &amp; Engineering Services</h2>
+          <span className="section-label">What We Build</span>
+          <h2 className="section-title">Custom Software Development Services</h2>
           <p className="section-subtitle">
-            Deep expertise across the full technology stack — from transistors to user interfaces,
-            embedded firmware to cloud infrastructure. Built to solve real business problems.
+            End-to-end custom application development across the full technology stack —
+            from embedded firmware to cloud infrastructure. Every solution is built from
+            scratch to fit your exact business requirements.
           </p>
         </div>
 
@@ -64,6 +73,15 @@ export default function Services() {
               <p className="service-card__desc">{s.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="services__cta-row">
+          <p className="services__cta-text">
+            Need a custom application built for your business?
+          </p>
+          <a href="#contact" className="btn btn--primary" onClick={e => { e.preventDefault(); smoothScrollTo('#contact') }}>
+            Get a Free Consultation
+          </a>
         </div>
       </div>
     </section>

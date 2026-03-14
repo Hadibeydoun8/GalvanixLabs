@@ -59,8 +59,26 @@
   line-height: 1.65;
 }
 
+.services__cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.services__cta-text {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
 @media (max-width: 600px) {
   .services__grid {
     grid-template-columns: 1fr;
+  }
+  .services__cta-row {
+    flex-direction: column;
+    text-align: center;
   }
 }

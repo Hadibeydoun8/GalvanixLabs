@@ -6,6 +6,21 @@ const techStack = [
   'PostgreSQL', 'Docker', 'AWS / Cloud', 'PCB Design',
 ]
 
+const industries = [
+  'Photography & Media',
+  'Sports & Events',
+  'Non-Profit & NGO',
+  'Manufacturing',
+  'Healthcare',
+  'Logistics & Supply Chain',
+  'Hospitality & Venues',
+  'Education',
+  'Retail & E-Commerce',
+  'Government & Public Sector',
+  'Museums & Cultural',
+  'Startups',
+]
+
 export default function About() {
   return (
     <section id="about" className="about">
@@ -13,27 +28,30 @@ export default function About() {
         <div className="about__layout">
           {/* Text */}
           <div className="about__text">
-            <span className="section-label">About</span>
+            <span className="section-label">About Galvanix Labs</span>
             <h2 className="section-title about__title">
-              Engineering from<br/>
-              <span className="about__title-accent">first principles</span>
+              Custom Software Built<br/>
+              <span className="about__title-accent">from First Principles</span>
             </h2>
             <p className="about__para">
-              Galvanix Labs was founded on the belief that technology should be built right —
-              with precision, depth, and a genuine understanding of the problem at hand.
-              Whether it&apos;s an FPGA running AI at a live sports event, a route-optimisation
-              engine for UNICEF, or a custom microcontroller punch system, every project
-              receives the same rigorous engineering approach.
+              Galvanix Labs is a <strong>custom software development company</strong> founded on the
+              belief that technology should be built right — with precision, depth, and a genuine
+              understanding of the problem at hand. Whether it&apos;s a <strong>custom FPGA application</strong>{' '}
+              running AI at a live sports event, a route-optimisation engine for UNICEF, or a
+              custom microcontroller punch system, every project receives the same rigorous
+              engineering approach.
             </p>
             <p className="about__para">
               We operate at every layer of the stack — from PCB design and embedded firmware
               to cloud APIs and polished user interfaces. That breadth allows us to build
-              solutions that other teams simply cannot, delivering systems that are cohesive,
-              reliable, and uniquely fitted to your needs.
+              <strong> custom software solutions</strong> that other teams simply cannot, delivering
+              systems that are cohesive, reliable, and uniquely fitted to your needs.
             </p>
             <p className="about__para">
-              Based in Michigan and serving clients from small local businesses to UN agencies
-              worldwide — scale and sector don&apos;t matter. Challenging problems do.
+              Based in <strong>Michigan</strong> and serving clients from small local businesses to
+              UN agencies worldwide — scale and sector don&apos;t matter. Challenging problems do.
+              Our custom application development process is transparent, collaborative, and
+              always focused on delivering real business value.
             </p>
           </div>
 
@@ -61,6 +79,16 @@ export default function About() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Industries We Serve */}
+        <div className="about__industries">
+          <h3 className="about__industries-title">Industries We Build Custom Software For</h3>
+          <div className="about__industries-grid">
+            {industries.map(ind => (
+              <span key={ind} className="about__industry-tag">{ind}</span>
+            ))}
           </div>
         </div>
       </div>

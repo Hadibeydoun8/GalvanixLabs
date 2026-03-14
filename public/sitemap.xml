@@ -8,7 +8,7 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://galvanixlabs.com/og-image.png</image:loc>
-      <image:title>Galvanix Labs — Custom Software Development</image:title>
+      <image:title>Galvanix Labs — Custom Software Development Company Michigan</image:title>
     </image:image>
   </url>
   <url>
@@ -28,6 +28,12 @@
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://galvanixlabs.com/#faq</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://galvanixlabs.com/#contact</loc>

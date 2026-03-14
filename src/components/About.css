@@ -84,6 +84,42 @@
   border-radius: 6px;
 }
 
+/* Industries We Serve */
+.about__industries {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.about__industries-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+}
+
+.about__industries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.about__industry-tag {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.about__industry-tag:hover {
+  border-color: var(--color-border-glow);
+  color: var(--color-primary);
+}
+
 @media (max-width: 900px) {
   .about__layout {
     grid-template-columns: 1fr;
